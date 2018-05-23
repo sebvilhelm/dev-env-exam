@@ -6,7 +6,7 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail --names \"💻,📦\" \"npm server\" \"yarn client\""
+    "dev": "concurrently --kill-others-on-fail --names \"💻,📦\" \"npm server\" \"npm client\""
   },
   "keywords": [],
   "author": "",
