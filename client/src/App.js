@@ -9,16 +9,16 @@ import VideoPage from './components/VideoPage';
 class App extends Component {
   render() {
     return (
-      <div>
-        <Header withUser="true" />
+      <Router>
+        <div>
+          <Header withUser="true" />
 
-        <Router>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/video/:id" component={VideoPage} />
           </Switch>
-        </Router>
-      </div>
+        </div>
+      </Router>
     );
   }
 }
