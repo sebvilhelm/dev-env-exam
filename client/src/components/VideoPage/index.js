@@ -7,17 +7,20 @@ import Rating from './Rating';
 
 export default class VideoPage extends React.Component {
   state = {
-    video: {},
+    video: {
+      video: '',
+    },
   };
 
   componentDidMount() {
     axios.get(`/api/videos/${this.props.match.params.id}`).then(({ data: video }) => this.setState({ video }));
   }
+
   render() {
     const { video } = this.state;
     return (
       <div>
-        <Player video={video} />
+        <Player videoLink={video.video} />
         <Details title={video.title} description={video.description} />
         <Rating />
       </div>
