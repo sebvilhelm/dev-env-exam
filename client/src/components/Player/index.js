@@ -13,7 +13,6 @@ export default class Player extends Component {
   };
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    console.log(nextProps, prevState);
     if (nextProps.videoLink !== prevState.videoLink) {
       return {
         videoLink: nextProps.videoLink,
