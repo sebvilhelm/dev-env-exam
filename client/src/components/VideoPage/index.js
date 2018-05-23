@@ -11,7 +11,7 @@ export default class VideoPage extends React.Component {
   };
 
   componentDidMount() {
-    axios.get('/api/videos/1').then(({ data: video }) => this.setState({ video }));
+    axios.get(`/api/videos/${this.props.match.params.id}`).then(({ data: video }) => this.setState({ video }));
   }
   render() {
     const { video } = this.state;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const style = {
   img: {
@@ -35,9 +36,11 @@ const style = {
 // TODO: router link
 
 export default ({ title, link, thumbnail }) => (
-  <div style={style.container}>
-    <img style={style.img} src={thumbnail} alt={title} />
-    <div style={style.overlay} />
-    <div style={style.title}>{title}</div>
-  </div>
+  <Link to={link}>
+    <div style={style.container}>
+      <img style={style.img} src={thumbnail} alt={title} />
+      <div style={style.overlay} />
+      <div style={style.title}>{title}</div>
+    </div>
+  </Link>
 );
