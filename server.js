@@ -4,9 +4,6 @@ const app = express();
 
 const port = process.env.PORT || 5000;
 
-app.get('/api/users', (req, res) => {
-  res.json({ response: 'hello' });
-});
 const videos = [
   {
     id: '1',
