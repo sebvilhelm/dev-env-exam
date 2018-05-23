@@ -16,7 +16,6 @@
     "nodemon": "^1.17.5"
   },
   "dependencies": {
-    "express": "^4.16.3",
-    "webtorrent": "^0.100.0"
+    "express": "^4.16.3"
   }
 }
