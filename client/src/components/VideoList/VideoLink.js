@@ -11,16 +11,22 @@ const style = {
   },
   container: {
     position: 'relative',
+    height: '100%',
   },
   title: {
     position: 'relative',
     zIndex: 2,
     color: 'white',
-    textAlign: 'center',
     textTransform: 'uppercase',
     letterSpacing: '1.111111px',
     fontSize: '6rem',
     fontWeight: 'bold',
+    whiteSpace: 'nowrap',
+    margin: 'auto 0',
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   overlay: {
     backgroundColor: 'black',

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './style.css'
 
 import VideoList from '../VideoList';
 
@@ -15,11 +16,14 @@ export default class Home extends React.Component {
     });
   }
 
+  // FIX HOME PAGE
+  // FLEXBOX layout
+
   render() {
     return (
-      <div>
-        <h1>Home</h1>
-        <VideoList videos={this.state.videos} />
+      <div className="container">
+        <h1>Featured Programs</h1>
+        <VideoList className="list-container" videos={this.state.videos} />
       </div>
     );
   }
