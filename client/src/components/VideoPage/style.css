@@ -1,8 +1,18 @@
+.video-page {
+  flex: 1;
+}
+
 .video-page--dark-mode {
   background-color: #444444;
 }
 
 .video-page__container {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .video-page__info {
+    padding: 0 1rem;
+  }
 }

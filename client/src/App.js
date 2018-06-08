@@ -8,7 +8,7 @@ import VideoPage from './components/VideoPage';
 
 const App = () => (
   <Router>
-    <div>
+    <div style={{ display: 'contents' }}>
       <Header withUser="true" />
 
       <Switch>

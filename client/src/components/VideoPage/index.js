@@ -38,9 +38,11 @@ export default class VideoPage extends React.Component {
       <div className={this.setPageClassNames()}>
         <div className="video-page__container">
           <Player videoLink={video.videoURL} />
-          <Switch onChange={this.toggleDarkMode} />
-          <Details title={video.title} description={video.description} />
-          <Rating />
+          <div className="video-page__info">
+            <Switch defaultChecked={this.state.darkMode} onChange={this.toggleDarkMode} />
+            <Details title={video.title} description={video.description} />
+            <Rating />
+          </div>
         </div>
       </div>
     );

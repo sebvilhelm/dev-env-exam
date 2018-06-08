@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import WebTorrent from 'webtorrent';
-
-const style = {
-  video: {
-    width: '100%',
-  },
-};
+import './style.css';
 
 export default class Player extends Component {
   constructor(props) {
@@ -47,10 +42,12 @@ export default class Player extends Component {
 
   render() {
     return (
-      <div>
-        <video style={style.video} ref={this.video} controls>
-          Your browser does not support HTML5 video.
-        </video>
+      <div className="player__container">
+        <div className="player__video-wrapper">
+          <video className="player__video" ref={this.video} controls>
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
       </div>
     );
   }
