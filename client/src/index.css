@@ -13,12 +13,6 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-color: #fafafa;
-  display: flex;
-  flex-flow: column wrap;
-}
-
-#root {
-  display: contents;
 }
 
 @import '~antd/dist/antd.css';
