@@ -11,10 +11,12 @@ const App = () => (
     <React.Fragment>
       <Header withUser="true" />
 
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/video/:id" component={VideoPage} />
-      </Switch>
+      <div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/video/:id" component={VideoPage} />
+        </Switch>
+      </div>
     </React.Fragment>
   </Router>
 );

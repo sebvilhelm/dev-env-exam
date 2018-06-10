@@ -16,10 +16,10 @@ const Header = props => (
     </div>
     <Spacer />
     {props.withUser && (
-      <div>
+      <React.Fragment>
         <Avatar icon="user" />
         <Button>Logout</Button>
-      </div>
+      </React.Fragment>
     )}
   </header>
 );

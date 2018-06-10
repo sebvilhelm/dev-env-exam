@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import './style.css'
+import './style.css';
 
 import VideoList from '../VideoList';
 
@@ -15,9 +15,6 @@ export default class Home extends React.Component {
       this.setState({ videos });
     });
   }
-
-  // FIX HOME PAGE
-  // FLEXBOX layout
 
   render() {
     return (

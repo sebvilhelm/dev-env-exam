@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import { Switch } from 'antd';
 
 import Player from '../Player';
 import Details from './Details';
@@ -14,35 +13,24 @@ export default class VideoPage extends React.Component {
       title: '',
       description: '',
     },
-    darkMode: false,
   };
 
   componentDidMount() {
     axios.get(`/api/videos/${this.props.match.params.id}`).then(({ data: video }) => this.setState({ video }));
   }
 
-  setPageClassNames = () => {
-    if (this.state.darkMode) {
-      return 'video-page video-page--dark-mode';
-    }
-    return 'video-page';
-  };
-
   toggleDarkMode = () => {
-    this.setState({ darkMode: !this.state.darkMode });
+    console.log('dark mode');
   };
 
   render() {
     const { video } = this.state;
     return (
-      <div className={this.setPageClassNames()}>
-        <div className="video-page__container">
-          <Player videoLink={video.videoURL} />
-          <div className="video-page__info">
-            <Switch defaultChecked={this.state.darkMode} onChange={this.toggleDarkMode} />
-            <Details title={video.title} description={video.description} />
-            <Rating />
-          </div>
+      <div className="video-page__container">
+        <Player videoLink={video.videoURL} />
+        <div className="video-page__info">
+          <Details title={video.title} description={video.description} />
+          <Rating />
         </div>
       </div>
     );
