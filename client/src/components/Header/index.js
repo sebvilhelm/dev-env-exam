@@ -23,7 +23,7 @@ const Header = props => (
         <MiniSpacer />
         <Avatar icon="user" />
         <MiniSpacer />
-        <Button>Logout</Button>
+        <Button onClick={props.logout}>Logout</Button>
       </React.Fragment>
     )) || (
       <Link to="/login">

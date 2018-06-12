@@ -35,7 +35,7 @@ class App extends React.Component {
     return (
       <Router>
         <React.Fragment>
-          <Header user={this.state.user} withUser="true" />
+          <Header logout={this.logout} user={this.state.user} withUser="true" />
 
           <div>
             <Switch>
