@@ -30,7 +30,7 @@ export default class VideoPage extends React.Component {
         <Player videoLink={video.videoURL} />
         <div className="video-page__info">
           <Details title={video.title} description={video.description} />
-          <Rating />
+          <Rating className="video-page__rating" />
         </div>
       </div>
     );

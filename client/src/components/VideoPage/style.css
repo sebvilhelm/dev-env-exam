@@ -12,3 +12,19 @@
     padding: 0 1rem;
   }
 }
+
+.video-page__info {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+@media (max-width: 400px) {
+  .video-page__info {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .video-page__rating {
+    grid-row: 1;
+  }
+}
