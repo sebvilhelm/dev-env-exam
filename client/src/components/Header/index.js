@@ -17,14 +17,18 @@ const Header = props => (
       </Link>
     </div>
     <Spacer />
-    {props.withUser && (
+    {(props.user && (
       <React.Fragment>
-        <span style={{ color: '#ffffff' }}>Tobias Thygesen</span>
+        <span style={{ color: '#ffffff' }}>{props.user}</span>
         <MiniSpacer />
         <Avatar icon="user" />
         <MiniSpacer />
         <Button>Logout</Button>
       </React.Fragment>
+    )) || (
+      <Link to="/login">
+        <Button>Login</Button>
+      </Link>
     )}
   </header>
 );
