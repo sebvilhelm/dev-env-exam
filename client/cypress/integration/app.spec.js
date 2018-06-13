@@ -4,7 +4,6 @@ context('app', () => {
   });
 
   it('should load', () => {
-    // Test all elements are visible
     cy
       .get('h1')
       .should('be.visible')
