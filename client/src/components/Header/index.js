@@ -19,14 +19,16 @@ const Header = props => (
     <Spacer />
     {(props.user && (
       <React.Fragment>
-        <span style={{ color: '#ffffff' }}>{props.user}</span>
+        <span id="header__userName" style={{ color: '#ffffff' }}>
+          {props.user}
+        </span>
         <MiniSpacer />
         <Avatar icon="user" />
         <MiniSpacer />
         <Button onClick={props.logout}>Logout</Button>
       </React.Fragment>
     )) || (
-      <Link to="/login">
+      <Link to="/login" id="btnLogin">
         <Button>Login</Button>
       </Link>
     )}
